@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_strrchr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:51:34 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/07 16:58:26 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/18 16:03:48 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	main(void)
 {
-	char *s = "libft-test-tokyo";
+	char *s = "'libft-test-tokyo";
 	printf("%s\t%s\n", ft_strrchr(s, 'l'), strrchr(s, 'l'));
 	printf("%s\t%s\n", ft_strrchr(s, 'i'), strrchr(s, 'i'));
 	printf("%s\t%s\n", ft_strrchr(s, 'b'), strrchr(s, 'b'));

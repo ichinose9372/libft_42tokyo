@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+         #
+#    By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/15 12:00:40 by ichinoseyuu      ###   ########.fr        #
+#    Updated: 2022/10/18 18:02:28 by yichinos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,12 @@ SRCS	=	ft_isalpha.c	\
 			ft_strmapi.c	\
 			ft_striteri.c	\
 			ft_split.c		\
+			ft_lstnew.c		\
+			ft_lstadd_front.c	\
+			ft_lstsize.c	\
+			ft_lstlast.c	\
+			ft_lstadd_back.c\
+
 
 
 
