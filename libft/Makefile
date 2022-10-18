@@ -6,7 +6,7 @@
 #    By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/18 18:02:28 by yichinos         ###   ########.fr        #
+#    Updated: 2022/10/18 18:52:35 by yichinos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,8 @@ SRCS	=	ft_isalpha.c	\
 			ft_lstsize.c	\
 			ft_lstlast.c	\
 			ft_lstadd_back.c\
+			ft_lstdelone.c	\
+			ft_lstclear.c	\
 
 
 
