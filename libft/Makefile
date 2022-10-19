@@ -6,7 +6,7 @@
 #    By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/19 17:16:39 by yichinos         ###   ########.fr        #
+#    Updated: 2022/10/19 17:24:38 by yichinos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ BONUS = ft_lstadd_back.c	\
 		ft_lstsize.c
 
 OBJS	=	$(SRCS:.c=.o)
+
 BONUS_OBJS = $(BONUS:.c=.o)
 
 CC		=	cc
@@ -76,6 +77,9 @@ fclean: clean
 	$(RM) $(NAME)
 
 re:		fclean all
+
+bonus:	$(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 
 .PHONY: all clean fclean re
