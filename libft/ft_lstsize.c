@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:03:57 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/18 18:31:28 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/19 12:48:23 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	count;
 
 	count = 0;
-	while (lst -> next != NULL)
+	while (lst != NULL)
 	{
 		lst = lst -> next;
 		count++;
