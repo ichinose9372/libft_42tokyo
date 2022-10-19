@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+         #
+#    By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/18 18:52:35 by yichinos         ###   ########.fr        #
+#    Updated: 2022/10/19 20:38:15 by ichinoseyuu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,18 +46,19 @@ SRCS	=	ft_isalpha.c	\
 			ft_strmapi.c	\
 			ft_striteri.c	\
 			ft_split.c		\
-			ft_lstnew.c		\
-			ft_lstadd_front.c	\
-			ft_lstsize.c	\
-			ft_lstlast.c	\
-			ft_lstadd_back.c\
-			ft_lstdelone.c	\
-			ft_lstclear.c	\
 
-
-
+BONUS = ft_lstadd_back.c	\
+		ft_lstadd_front.c	\
+		ft_lstclear.c		\
+		ft_lstdelone.c 		\
+		ft_lstiter.c 		\
+		ft_lstlast.c 		\
+		ft_lstnew.c 		\
+		ft_lstsize.c		\
 
 OBJS	=	$(SRCS:.c=.o)
+
+BONUS_OBJS = $(BONUS:.c=.o)
 
 CC		=	cc
 CFLAG	=	-Wall -Wextra -Werror
@@ -69,14 +70,15 @@ $(NAME)	: $(OBJS)
 		ar rcs $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean:
-	$(RM) $(OBJS) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
 re:		fclean all
 
-test:
-		touch test
+bonus:	$(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 
 .PHONY: all clean fclean re

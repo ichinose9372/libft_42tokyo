@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*    ft_lstmap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 17:03:57 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/19 12:48:23 by yichinos         ###   ########.fr       */
+/*   Created: 2022/10/19 13:31:28 by yichinos          #+#    #+#             */
+/*   Updated: 2022/10/19 17:14:53 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void*(*f)(void *), void(*del)(void *));
 {
-	int	count;
+	t_list	;
 
-	count = 0;
-	while (lst != NULL)
-	{
-		lst = lst -> next;
-		count++;
-	}
-	return (count);
+
 }

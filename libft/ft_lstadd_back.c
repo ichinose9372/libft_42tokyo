@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 18:01:30 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/18 23:22:11 by ichinoseyuu      ###   ########.fr       */
+/*   Created: 2022/10/19 20:21:27 by ichinoseyuu       #+#    #+#             */
+/*   Updated: 2022/10/19 21:47:42 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ndPtr;
 
-	if (!new)
-		return ;
-	if (*lst)
+	ndPtr = *lst;
+	if (!(*lst))
 	{
 		*lst = new;
 		return ;
 	}
-	ndPtr = ft_lstlast(*lst);
-	ndPtr -> next = NULL;
+	while (ndPtr -> next != NULL)
+	{
+		ndPtr = ndPtr -> next;
+	}
+	ndPtr -> next = new;
 }

@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   test_strmapi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 17:03:57 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/19 12:48:23 by yichinos         ###   ########.fr       */
+/*   Created: 2022/10/19 13:43:51 by yichinos          #+#    #+#             */
+/*   Updated: 2022/10/19 13:44:34 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+#include<stdio.h>
 
-int	ft_lstsize(t_list *lst)
+char	ft_plusone(unsigned int i, char c)
 {
-	int	count;
+	return (1 + c);
+}
 
-	count = 0;
-	while (lst != NULL)
-	{
-		lst = lst -> next;
-		count++;
-	}
-	return (count);
+char	ft_plusi(unsigned int i, char c)
+{
+	return (i + c);
+}
+
+int	main(void)
+{
+	printf("%s\n", ft_strmapi("abcdefg", ft_plusone));
+	printf("%s\n", ft_strmapi("abcdefg", ft_plusi));
+	printf("%s\n", ft_strmapi("abcdefg", NULL));
+	printf("%s\n", ft_strmapi("", ft_plusi));
+	return (0);
 }
