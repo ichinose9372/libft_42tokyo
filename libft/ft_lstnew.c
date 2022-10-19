@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_Istnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:36:11 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/18 16:19:55 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/19 16:39:37 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 t_list	*ft_lstnew(void	*content)
 {
-	t_list	ndPtr;
+	t_list	*ndPtr;
 
-	ndPtr = malloc(sizeof(t_list);
-	if(!ndPtr)
+	ndPtr = malloc(sizeof(t_list));
+	if (!ndPtr)
 		return (NULL);
 	ndPtr -> content = content;
 	ndPtr -> next = NULL;
