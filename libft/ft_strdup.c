@@ -6,7 +6,7 @@
 /*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:52:46 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/17 12:01:10 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/20 14:38:43 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strdup(const char *s1)
 	char	*p_s1;
 	size_t	i;
 
-	if (!s1)
+	if (s1 == NULL)
 		return (NULL);
 	p_s1 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (!p_s1)
+	if (p_s1 == NULL)
 		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')

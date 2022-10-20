@@ -6,7 +6,7 @@
 /*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:57:39 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/17 20:53:18 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/20 14:18:33 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	p_dst = (char *)dst;
 	p_src = (char *)src;
-	if (dst == src || !len)
+	if (dst == src)
 		return (dst);
 	if (dst < src)
 		ft_memcpy(dst, src, len);

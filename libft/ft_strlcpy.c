@@ -6,7 +6,7 @@
 /*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 11:12:36 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/11 17:42:47 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/20 14:24:46 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	size_t	i;
 
 	i = ft_strlen(src);
-	if (n <= 0)
+	if (n == 0)
 		return (i);
 	while (n > 1)
 	{
