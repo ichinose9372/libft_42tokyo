@@ -6,7 +6,7 @@
 /*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 20:21:27 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/19 21:47:42 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/20 08:20:54 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*ndPtr;
 
 	ndPtr = *lst;
-	if (!(*lst))
+	if (*lst == NULL)
 	{
 		*lst = new;
 		return ;

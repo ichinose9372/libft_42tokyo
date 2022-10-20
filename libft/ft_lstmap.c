@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ft_lstmap.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:31:28 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/19 17:14:53 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/20 09:06:07 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void*(*f)(void *), void(*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void*(*f)(void *), void(*del)(void *))
 {
-	t_list	;
+	t_list	*nd_new;
+	t_list	*nd_top;
 
-
+	nd_top = NULL;
+	while (lst != NULL)
+	{
+		nd_new = ft_lstnew((f)(lst -> content));
+		if (nd_new == NULL)
+		{
+			ft_lstclear(&lst, (del));
+			return (NULL);
+		}
+		ft_lstadd_back(&nd_top, nd_new);
+		lst = lst -> next;
+	}
+	return (nd_top);
 }

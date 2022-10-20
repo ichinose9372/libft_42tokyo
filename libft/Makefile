@@ -6,7 +6,7 @@
 #    By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/19 20:38:15 by ichinoseyuu      ###   ########.fr        #
+#    Updated: 2022/10/20 09:02:10 by ichinoseyuu      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ BONUS = ft_lstadd_back.c	\
 		ft_lstlast.c 		\
 		ft_lstnew.c 		\
 		ft_lstsize.c		\
+		ft_lstmap.c
 
 OBJS	=	$(SRCS:.c=.o)
 

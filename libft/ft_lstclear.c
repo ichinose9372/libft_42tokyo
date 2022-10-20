@@ -6,16 +6,15 @@
 /*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 20:22:45 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/19 20:24:27 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/20 09:00:57 by ichinoseyuu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include"libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *ndPtr;
+	t_list	*ndPtr;
 
 	if ((*lst) == NULL)
 		return ;
