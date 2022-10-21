@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:52:04 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/17 13:02:34 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/21 14:58:31 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-static int	check_nb(long int number, long int type, char c)
+static int	check_nb(long number, int type, char c)
 {
 	if ((number * 10 + (c - '0')) / 10 != number)
 	{
@@ -35,8 +35,8 @@ static int	check_nb(long int number, long int type, char c)
 
 int	ft_atoi(const char *nptr)
 {
-	long int	type;
-	long int	number;
+	int		type;
+	long	number;
 
 	type = 1;
 	number = 0;
@@ -54,7 +54,8 @@ int	ft_atoi(const char *nptr)
 	{
 		if ((number * 10 + (*nptr - '0')) / 10 != number)
 			return (check_nb(number, type, *nptr));
-		number = number * 10 + *nptr - '0';
+		number *= 10;
+		number += *nptr - '0';
 		nptr++;
 	}
 	return (number * type);

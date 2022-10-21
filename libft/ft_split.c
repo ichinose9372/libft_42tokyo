@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 13:02:22 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/17 13:41:15 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/21 15:19:50 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	**create(char **new_string, size_t	len, char const	*s, char c)
 		while (*s == c && *s != '\0')
 			s++;
 		new_string[i] = malloc(sizeof(char) * word_count(s, c) + 1);
-		if (!new_string)
+		if (new_string == NULL)
 			free(new_string);
 		j = 0;
 		while (*s != '\0' && *s != c)
