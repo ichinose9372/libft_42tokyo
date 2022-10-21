@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+         #
+#    By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/20 09:02:10 by ichinoseyuu      ###   ########.fr        #
+#    Updated: 2022/10/21 11:22:21 by yichinos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,4 +82,4 @@ bonus:	$(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
