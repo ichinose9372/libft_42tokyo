@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:02:03 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/17 13:01:27 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/23 15:10:46 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static size_t	ft_count(int num)
 		num *= -1;
 		count++;
 	}
+	if (num == 0)
+		count = 1;
 	while (num)
 	{
 		num /= 10;

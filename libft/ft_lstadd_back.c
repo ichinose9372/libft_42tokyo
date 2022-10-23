@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 20:21:27 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/21 15:55:51 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/22 11:48:09 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ndptr;
 
-	ndPtr = *lst;
+	ndptr = *lst;
 	if (*lst == NULL)
 	{
 		*lst = new;

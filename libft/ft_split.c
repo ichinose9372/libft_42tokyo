@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 13:02:22 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/21 15:19:50 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:16:59 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ static size_t	word_count(char const *s, char c)
 	return (i);
 }
 
-static size_t	len_word(char const *s, char c)
+static size_t	len_count(char const *s, char c)
 {
 	size_t	len;
-	size_t	i;
 
 	len = 0;
 	while (*s != 0)
@@ -36,6 +35,19 @@ static size_t	len_word(char const *s, char c)
 		s++;
 	}
 	return (len);
+}
+
+static void	allfree(char **new_string)
+{
+	size_t	i;
+
+	i = 0;
+	while (new_string[i] == NULL)
+	{
+		free(new_string[i]);
+		i++;
+	}
+	free(new_string);
 }
 
 char	**create(char **new_string, size_t	len, char const	*s, char c)
@@ -50,7 +62,10 @@ char	**create(char **new_string, size_t	len, char const	*s, char c)
 			s++;
 		new_string[i] = malloc(sizeof(char) * word_count(s, c) + 1);
 		if (new_string == NULL)
-			free(new_string);
+		{
+			allfree(new_string);
+			return (NULL);
+		}
 		j = 0;
 		while (*s != '\0' && *s != c)
 			new_string[i][j++] = *s++;
@@ -68,7 +83,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	len = len_word(s, c);
+	len = len_count(s, c);
 	new_string = malloc(sizeof(char *) * len + 1);
 	if (!new_string)
 		return (NULL);

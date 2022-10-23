@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:30:49 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/21 11:47:46 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/23 10:47:56 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t	len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	if (*s2 == '\0')
 		return ((char *)s1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:31:28 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/20 09:06:07 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/23 11:38:26 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstmap(t_list *lst, void*(*f)(void *), void(*del)(void *))
 	t_list	*nd_new;
 	t_list	*nd_top;
 
+	if ((*f) == NULL)
+		return (NULL);
 	nd_top = NULL;
 	while (lst != NULL)
 	{

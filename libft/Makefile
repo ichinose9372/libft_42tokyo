@@ -6,7 +6,7 @@
 #    By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/21 11:22:21 by yichinos         ###   ########.fr        #
+#    Updated: 2022/10/23 10:38:29 by yichinos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ OBJS	=	$(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
 
 CC		=	cc
-CFLAG	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -f
 
 all : $(NAME)

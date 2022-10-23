@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 20:22:45 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/21 15:55:30 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/23 15:47:53 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*ndptr;
 
-	if ((*lst) == NULL)
+	if (!lst || !*lst || !del)
 		return ;
-	while ((*lst) != NULL)
+	while (*lst)
 	{
-		ndptr = (*lst)->next;
+		ndptr = (*lst)-> next;
 		ft_lstdelone((*lst), (del));
-		*lst = ndPtr;
+		*lst = ndptr;
 	}
+	(*lst) = NULL;
 }
