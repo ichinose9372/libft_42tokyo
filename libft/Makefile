@@ -6,7 +6,7 @@
 #    By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:35:07 by ichinoseyuu       #+#    #+#              #
-#    Updated: 2022/10/23 10:38:29 by yichinos         ###   ########.fr        #
+#    Updated: 2022/10/25 12:06:38 by yichinos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRCS	=	ft_isalpha.c	\
 			ft_strrchr.c	\
 			ft_memcmp.c		\
 			ft_memchr.c		\
-			ft_putchr_fd.c	\
+			ft_putchar_fd.c	\
 			ft_putstr_fd.c	\
 			ft_putendl_fd.c	\
 			ft_putnbr_fd.c	\

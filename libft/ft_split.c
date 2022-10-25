@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 13:02:22 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/23 12:16:59 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/10/25 12:01:34 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	allfree(char **new_string)
 	size_t	i;
 
 	i = 0;
-	while (new_string[i] == NULL)
+	while (new_string[i] != NULL)
 	{
 		free(new_string[i]);
 		i++;
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	len = len_count(s, c);
-	new_string = malloc(sizeof(char *) * len + 1);
+	new_string = malloc(sizeof(char *) * (len + 1));
 	if (!new_string)
 		return (NULL);
 	return (create(new_string, len, s, c));

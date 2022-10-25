@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:58:09 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/16 15:46:45 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/25 12:03:52 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *str, int c)
 	while (s_size > 0)
 	{
 		if (p_s[s_size] == (char) c)
-			return (&p_s[s_size]);
+			return (&p_s[s_size - 1]);
 		s_size--;
 	}
 	if (p_s[0] == (char) c)
