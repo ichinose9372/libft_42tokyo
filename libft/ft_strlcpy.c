@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 11:12:36 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/20 14:24:46 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2022/10/25 16:04:36 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 			*dest++ = *src++;
 		}
 		else
-		{
 			break ;
-		}
 		n--;
 	}
 	*dest = '\0';
