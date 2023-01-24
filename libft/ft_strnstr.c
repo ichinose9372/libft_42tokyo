@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:30:49 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/25 17:19:29 by yichinos         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:22:34 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t	len)
 	if (*s2 == '\0')
 		return ((char *)s1);
 	i = 0;
-	while (i < len && !*s1)
+	while (i < len && *s1)
 	{
 		j = 0;
 		while (i + j < len && s1[i + j] != '\0' && s1[i + j] == s2[j])
@@ -33,3 +33,18 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t	len)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main(void)
+// {
+// 	char *hey;
+// 	char *needl;
+
+// 	hey = "12345";
+// 	needl = "2345";
+// 	printf("%s\n", strnstr(hey, hey, 0));
+// 	printf("%s\n", ft_strnstr(hey, hey, 0));
+// 	return (0);
+// }

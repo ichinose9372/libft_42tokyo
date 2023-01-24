@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 11:12:36 by yichinos          #+#    #+#             */
-/*   Updated: 2022/10/25 16:04:36 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/12/07 15:00:18 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	while (n > 1)
 	{
 		if (*src != '\0')
-		{
 			*dest++ = *src++;
-		}
 		else
 			break ;
 		n--;

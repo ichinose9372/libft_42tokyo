@@ -6,7 +6,7 @@
 /*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 21:04:20 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/23 11:14:15 by yichinos         ###   ########.fr       */
+/*   Updated: 2022/12/06 18:00:58 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str++;
 		s2++;
 	}
-	*str = 0;
+	*str = '\0';
 	return (str_new);
 }
