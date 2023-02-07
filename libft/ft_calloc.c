@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ichinoseyuuki <ichinoseyuuki@student.42    +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 13:04:33 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/16 18:14:00 by ichinoseyuu      ###   ########.fr       */
+/*   Updated: 2023/01/26 14:00:22 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

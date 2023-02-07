@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:52:04 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2023/01/18 11:42:19 by yichinos         ###   ########.fr       */
+/*   Updated: 2023/01/29 18:23:09 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,19 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (number * type);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char *str1;
+	char *str2;
+
+	str1 = "4294967298";
+	str2 = "4294967298";
+	printf("atoi : %d\n", atoi(str1));
+	printf("ft_atoi : %d\n", ft_atoi(str2));
+	printf("%d\n", (int)LONG_MAX);
 }

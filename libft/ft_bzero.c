@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yichinos <yichinos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yichinos <yichinos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:46:25 by ichinoseyuu       #+#    #+#             */
-/*   Updated: 2022/10/25 12:00:03 by yichinos         ###   ########.fr       */
+/*   Updated: 2023/01/26 14:00:55 by yichinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *b, size_t len)
 {
-	ft_memset(b, 0, len);
+	ft_memset(b, '\0', len);
 }
